@@ -46,7 +46,7 @@ Sigue estos pasos para instalar la extensión Pomodoro Timer en tu navegador Chr
 1. **Clonar el Repositorio:**
 
    ```bash
-   git clone https://github.com/tu-usuario/pomodoro-timer-extension.git
+   git clone https://github.com/FAD95/PomodoroChromeExtension.git
    ```
 2. **Navegar al Directorio de la Extensión:**
 
@@ -152,7 +152,7 @@ Mantén tu enfoque gestionando la lista de sitios web que deseas bloquear durant
 2. **Clonar tu Fork:**
 
    ```bash
-   git clone https://github.com/tu-usuario/pomodoro-timer-extension.git
+   git clone https://github.com/FAD95/PomodoroChromeExtension.git
    ```
 3. **Crear una Nueva Rama:**
 
@@ -185,8 +185,8 @@ Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
 
 Si tienes alguna pregunta, sugerencia o comentario, no dudes en ponerte en contacto:
 
-- **Correo Electrónico:** tu-correo@example.com
-- **GitHub:** [tu-usuario](https://github.com/tu-usuario)
+- **Correo Electrónico:** feescorciam@pm.me
+- **GitHub:** [FAD95](https://github.com/FAD95)
 
 ---
 
