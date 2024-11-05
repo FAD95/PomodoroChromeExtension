@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Bloqueada</title>
+    <link rel="stylesheet" href="blocked.css"> <!-- Asegúrate de que la ruta sea correcta -->
+    <meta charset="UTF-8">
+</head>
+<body class="blocked">
+  <div class="blocked-container">
+      <h1>Página Bloqueada</h1>
+      <p>Estás en una sesión Pomodoro.</p>
+      <div class="timer-container">
+          <span id="timeRemaining" aria-live="polite">--:--</span> 
+          <span>minutos restantes</span>
+      </div>
+      <button id="pauseSession" class="control-button blocked" aria-label="Pausar y redirigir a la página">Pausar y Redirigir a <span id="originalUrl">URL</span></button>
+  </div>
+  
+  <script src="blocked.js"></script>
+</body>
+</html>

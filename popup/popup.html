@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<body>
+  <div class="container">
+    <h1>Pomodoro Timer</h1>
+    
+    <!-- Configuración del Temporizador -->
+    <div class="config" aria-labelledby="configHeading">
+      <h2 id="configHeading">Configuración</h2>
+      <div class="input-group">
+        <label for="workDuration">Tiempo de trabajo (min):</label>
+        <input type="number" id="workDuration" value="25" min="1" aria-describedby="workDurationDesc">
+        <span id="workDurationDesc" class="sr-only">Ingrese el tiempo de trabajo en minutos</span>
+      </div>
+      
+      <div class="input-group">
+        <label for="shortBreak">Descanso corto (min):</label>
+        <input type="number" id="shortBreak" value="5" min="1" aria-describedby="shortBreakDesc">
+        <span id="shortBreakDesc" class="sr-only">Ingrese el tiempo de descanso corto en minutos</span>
+      </div>
+      
+      <div class="input-group">
+        <label for="longBreak">Descanso largo (min):</label>
+        <input type="number" id="longBreak" value="15" min="1" aria-describedby="longBreakDesc">
+        <span id="longBreakDesc" class="sr-only">Ingrese el tiempo de descanso largo en minutos</span>
+      </div>
+      
+      <div class="input-group">
+        <label for="cycles">Número de ciclos:</label>
+        <input type="number" id="cycles" value="4" min="1" aria-describedby="cyclesDesc">
+        <span id="cyclesDesc" class="sr-only">Ingrese el número de ciclos de Pomodoro</span>
+      </div>
+      
+      <button id="saveSettingsButton" class="save-button" aria-label="Guardar configuración">Guardar Configuración</button>
+    </div>
+    
+    <!-- Indicador de Cuenta Regresiva -->
+    <div class="countdown-container" aria-labelledby="countdownHeading">
+      <h2 id="countdownHeading">Cuenta Regresiva</h2>
+      <div id="countdown" aria-live="polite">--:--</div>
+    </div>
+    
+    <!-- Indicador de Ciclo Actual -->
+    <div class="cycle-container" aria-labelledby="cycleHeading">
+      <h2 id="cycleHeading">Ciclo Actual</h2>
+      <div id="cycle" aria-live="polite">Ciclo: 0/4</div>
+    </div>
+    
+    <!-- Botones de Control: Play/Pause, Stop, Restart -->
+    <div class="button-grid">
+      <!-- Botón Unificado de Play/Pause -->
+      <button id="toggleButton" class="control-button" title="Iniciar/Reanudar" aria-label="Iniciar o Pausar temporizador">
+        <img src="../icons/play.png" alt="Play" class="button-icon" id="toggleIcon">
+      </button>
+      
+      <!-- Botón de Detener -->
+      <button id="stopButton" class="control-button" title="Detener" aria-label="Detener temporizador">
+        <img src="../icons/stop.png" alt="Stop" class="button-icon">
+      </button>
+      
+      <!-- Botón de Reiniciar -->
+      <button id="restartButton" class="control-button" title="Reiniciar" aria-label="Reiniciar ciclo actual">
+        <img src="../icons/restart.png" alt="Restart" class="button-icon">
+      </button>
+    </div>
+    
+    <!-- Lista de URLs Bloqueadas -->
+    <div class="blocked-urls-container" aria-labelledby="blockedUrlsHeading">
+      <h2 id="blockedUrlsHeading">URLs Bloqueadas</h2>
+      <div class="blocked-url-input">
+        <input type="text" id="blockedUrl" placeholder="Agregar URL" aria-label="Agregar URL para bloquear">
+        <button id="addUrlButton" class="add-url-button" aria-label="Agregar URL bloqueada">Agregar</button>
+      </div>
+      <ul id="blockedUrlsList" class="blocked-urls-list" aria-live="polite"></ul>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
